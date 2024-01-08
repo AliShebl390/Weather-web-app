@@ -11,6 +11,8 @@ let uv = document.querySelector("#uv");
 let hoursDiv = document.querySelector("#hoursDiv");
 let aside = document.querySelector("#aside");
 let searchInput = document.getElementById("searchInput");
+let menu = document.querySelector("#menu")
+let nav = document.querySelector("nav .inner")
 
 // create async function
 async function city() {
@@ -40,7 +42,7 @@ async function city() {
 async function getData(city) {
     // in case the location is undefined cairo city will be the default
     if (city === undefined) {
-        city = "london";
+        city = "cairo";
     }
     let data = await fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=fc2c9b6df5dc49e4b99162312240501&q=${city}&days=7&aqi=no&alerts=no`
@@ -128,3 +130,14 @@ function tConvert(time) {
     }
     return time.join(""); // return adjusted time or original string
 }
+
+menu.addEventListener("click", (e)=> {
+})
+
+menu.addEventListener("click", (e)=> {
+    if (!e.srcElement.checked) {
+        nav.classList.remove("active-nav")
+    } else {
+    nav.classList.add("active-nav")
+    }
+})
