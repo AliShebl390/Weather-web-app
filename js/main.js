@@ -11,8 +11,9 @@ let uv = document.querySelector("#uv");
 let hoursDiv = document.querySelector("#hoursDiv");
 let aside = document.querySelector("#aside");
 let searchInput = document.getElementById("searchInput");
-let menu = document.querySelector("#menu")
-let nav = document.querySelector("nav .inner")
+let menu = document.querySelector("#menu");
+let nav = document.querySelector("nav .inner");
+let layer = document.querySelector("#layer");
 
 // create async function
 async function city() {
@@ -62,7 +63,9 @@ async function getData(city) {
     isDay = finalData.current.is_day;
     if (isDay) {
         hero.attributes.src.value = "images/sun.png";
-    } else { hero.attributes.src.value = "images/crescent-moon.png";}
+    } else {
+        hero.attributes.src.value = "images/crescent-moon.png";
+    }
     //data for main bottom section
     feels.innerHTML = `${finalData.current.feelslike_c.toFixed()}<span>&#8451;</span>`;
     humidity.innerHTML = `${finalData.current.humidity}%`;
@@ -131,13 +134,16 @@ function tConvert(time) {
     return time.join(""); // return adjusted time or original string
 }
 
-menu.addEventListener("click", (e)=> {
-})
+menu.addEventListener("click", (e) => {});
 
-menu.addEventListener("click", (e)=> {
+menu.addEventListener("click", (e) => {
     if (!e.srcElement.checked) {
-        nav.classList.remove("active-nav")
+        nav.classList.remove("active-nav");
+        layer.classList.remove("active-layer");
     } else {
-    nav.classList.add("active-nav")
+        nav.classList.add("active-nav");
+        layer.classList.add("active-layer");
     }
-})
+});
+
+console.log(layer);
