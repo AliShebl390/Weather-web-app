@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/icons8-night-100.png" type="image/x-icon">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <div class="row justify-content-between">
+            <nav class="col-lg-1 col-md-1">
+                <div class="inner">
+                    <div class="nav-bar">
+                        <a href="#">
+                            <img src="images/icons8-night-100.png" class="w-75" alt="">
+                        </a>
+                        <ul class="nav-content list-unstyled mt-5 text-center">
+                            <li>
+                                <a href="" class=" d-block text-decoration-none active">
+                                    <i class="fa-solid fa-cloud-sun"></i>
+                                    Weather
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class=" d-block text-decoration-none">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class=" d-block text-decoration-none">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    LinkedIN
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class=" text-decoration-none">
+                                    <i class="fa-brands fa-github"></i>
+                                    Github
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="col-lg-6 ">
+                <div class="inner">
+                    <div class="search">
+                        <input id="searchInput" type="text" class="w-100 rounded-3" placeholder="Search for cities">
+                    </div>
+                    <div class="top">
+                        <div class="top-left">
+                            <h3 id="citySpan"></h3>
+                            <span id="rain"></span>
+                            <h2 id="temp_c">
+                            </h2>
+                        </div>
+                        <div class="top-right">
+                            <img id="hero" src="images/crescent-moon.png" class=" vertical-shake" alt="">
+                        </div>
+                    </div>
+                    <div class="middle rounded-3 text-light">
+                        <h4 class="text-uppercase">today's forecast</h4>
+                        <div id="hoursDiv" class="mid-content row row-cols-3 row-cols-md-6">
+                            <!-- Data from JS -->
+                        </div>
+                    </div>
+                    <div class="down">
+                        <div class="bottom rounded-3 text-light">
+                            <h4 class="text-uppercase">air conditions</h4>
+                            <div class="bottom-content row row-cols-2">
+                                <div class="box col">
+                                    <div class="first">
+                                        <i class="fa-solid fa-temperature-half"></i>
+                                        feels like
+                                    </div>
+                                    <div id="feels" class="second">
+                                        
+                                    </div>
+                                </div>
+                                <div class="box col">
+                                    <div class="first">
+                                        <i class="fa-solid fa-wind"></i>
+                                        wind
+                                    </div>
+                                    <div id="wind" class="second">
+                                        
+                                    </div>
+                                </div>
+                                <div class="box col">
+                                    <div class="first">
+                                        <i class="fa-solid fa-droplet"></i>
+                                        humidity
+                                    </div>
+                                    <div id="humadity" class="second">
+                                        46
+                                    </div>
+                                </div>
+                                <div class="box col">
+                                    <div class="first">
+                                        <i class="fa-solid fa-sun"></i>
+                                        UV index
+                                    </div>
+                                    <div id="uv" class="second">
+                                        3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-lg-5 ">
+                <div class="inner">
+                    <h3 class="text-uppercase">7-day Forecast</h3>
+                    <div id="aside" class="side-main-content">
+                        <!-- Data form JS -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
