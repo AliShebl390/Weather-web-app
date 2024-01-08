@@ -62,7 +62,7 @@ async function getData(city) {
         hero.attributes.src.value = "images/sun.png";
     } else { hero.attributes.src.value = "images/crescent-moon.png";}
     //data for main bottom section
-    feels.innerHTML = `${finalData.current.feelslike_c}<span>&#8451;</span>`;
+    feels.innerHTML = `${finalData.current.feelslike_c.toFixed()}<span>&#8451;</span>`;
     humidity.innerHTML = `${finalData.current.humidity}%`;
     wind.innerHTML = `${finalData.current.wind_kph} Kp/h`;
     uv.innerHTML = `${finalData.current.uv}`;
