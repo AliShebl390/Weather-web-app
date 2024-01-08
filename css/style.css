@@ -319,7 +319,7 @@ aside .inner {
 
 @media only screen and (max-height: 750px) {
     .side-main-content .box {
-        margin-top: .5rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -336,15 +336,14 @@ aside .inner {
 
 .side-main-content .box span {
     color: var(--sec-text);
+    width: 9ch;
 }
 
 .side-main-content .box>div {
     display: flex;
     align-items: center;
-}
-
-.side-main-content .box div img {
-    margin-right: 10px;
+    flex-direction: column;
+    text-align: center;
 }
 
 @media only screen and (max-width: 400px) {

@@ -85,21 +85,21 @@ async function getData(city) {
     // data for aside section (days)
     //
     let daysResult = "";
+    const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+    ];
+    let today = new Date(finalData.location.localtime).getDay();
+
     days.forEach((element) => {
         // store all data into Date variable which return number of day in a week
         let date = new Date(element.date).getDay();
-        // ceate a list of the days in the week
-        const weekday = [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-        ];
-        // get the day
-        let day = weekday[date];
+        let day = date === today ? "Today" : weekday[date];
         // display the data
         daysResult += `<div class="box">
         <span>${day}</span>
