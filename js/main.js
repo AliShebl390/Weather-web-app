@@ -28,7 +28,6 @@ async function city() {
     // checks the input cahnges and send it
     searchInput.addEventListener("input", function (e) {
         current = e.target.value;
-        console.log(current, currentCity);
         if (current !== null) {
             getData(current);
         }
