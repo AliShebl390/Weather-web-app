@@ -134,8 +134,6 @@ function tConvert(time) {
     return time.join(""); // return adjusted time or original string
 }
 
-menu.addEventListener("click", (e) => {});
-
 menu.addEventListener("click", (e) => {
     if (!e.srcElement.checked) {
         nav.classList.remove("active-nav");
@@ -145,5 +143,3 @@ menu.addEventListener("click", (e) => {
         layer.classList.add("active-layer");
     }
 });
-
-console.log(layer);
