@@ -30,7 +30,7 @@ async function city() {
     }
     // checks the input cahnges and send it
 
-    searchInput.addEventListener("keyup", function (e) {
+    searchInput.addEventListener("input", function (e) {
         current = e.target.value;
         if (current !== null) {
             getData(current);
@@ -41,15 +41,16 @@ async function city() {
 //
 //
 
-async function getData(city) {
+async function getData(currentCity) {
     // in case the location is undefined cairo city will be the default
-    if (city === undefined) {
-        city = "cairo";
+    if (currentCity === undefined) {
+        currentCity = "cairo";
     }
     let data = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=fc2c9b6df5dc49e4b99162312240501&q=${city}&days=7&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=fc2c9b6df5dc49e4b99162312240501&q=${currentCity}&days=7&aqi=no&alerts=no`
     );
-    // get the data from api
+    if (data.ok && 200 === data.status){
+        // get the data from api
     let finalData = await data.json();
 
     // get the next 7 days
@@ -114,6 +115,7 @@ async function getData(city) {
     </div>`;
     });
     aside.innerHTML = daysResult;
+    }
 }
 
 city();
