@@ -18,8 +18,8 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); */
-    background-color: var(--bg-color);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: var(--sec-text);
 }
 
 * {
@@ -47,7 +47,7 @@ nav .nav-bar {
     justify-content: flex-start;
     flex-direction: column;
     color: #fff;
-    width: 110px;
+    width: 90px;
 }
 
 .nav-bar a img {
@@ -56,8 +56,13 @@ nav .nav-bar {
 
 @media only screen and (max-width: 1200px) {
     nav .nav-bar {
-        width: 70px;
+        width: 80px;
         transition: 1s left;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    nav .nav-bar {
+        width: 105px;
     }
 }
 
@@ -287,6 +292,7 @@ main .top .top-left h3 {
 main .top .top-left span {
     color: var(--sec-text);
     text-transform: capitalize;
+    text-wrap: nowrap;
 }
 
 main .top .top-left h2 {
@@ -408,8 +414,9 @@ aside>.inner {
     border-radius: 1rem;
     position: fixed;
     width: 40%;
-    padding: 1rem;
+    padding: .8rem;
     color: #fff;
+    overflow: auto;
 }
 
 @media only screen and (max-width: 991px) {

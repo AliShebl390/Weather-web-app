@@ -29,7 +29,8 @@ async function city() {
         getData(currentCity);
     }
     // checks the input cahnges and send it
-    searchInput.addEventListener("input", function (e) {
+
+    searchInput.addEventListener("keyup", function (e) {
         current = e.target.value;
         if (current !== null) {
             getData(current);
@@ -53,8 +54,7 @@ async function getData(city) {
 
     // get the next 7 days
     let days = finalData.forecast.forecastday;
-    //
-    //
+
     // data for main top section
     citySpan.innerHTML = `${finalData.location.name}, ${finalData.location.country}`;
     rain.innerHTML = `chance of rain: ${finalData.forecast.forecastday[0].day.daily_chance_of_rain}%`;
@@ -84,9 +84,9 @@ async function getData(city) {
         `;
     }
     hoursDiv.innerHTML = hoursResult;
-    //
+
     // data for aside section (days)
-    //
+
     let daysResult = "";
     const weekday = [
         "Sunday",
