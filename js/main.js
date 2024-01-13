@@ -23,7 +23,7 @@ async function city() {
     );
     // store the data into variable
     let finalData = await data.json();
-    currentCity = finalData.city.name;
+    currentCity = finalData.country.name;
     // send the location of the user
     if (current === false) {
         getData(currentCity);
@@ -145,3 +145,5 @@ menu.addEventListener("click", (e) => {
         layer.classList.add("active-layer");
     }
 });
+
+
